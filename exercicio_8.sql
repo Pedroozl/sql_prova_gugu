@@ -1,0 +1,1 @@
+update votacoes set Quantidade = (SELECT (v.Quantidade + 100) as quantidade from votacoes as v join candidatos c on v.IDCandidato = c.Numero where c.IDCargo = 2 and c.IDPartido = 5 limit 1) where IDCandidato = 5;
